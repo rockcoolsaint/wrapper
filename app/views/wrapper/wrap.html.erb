@@ -1,0 +1,21 @@
+<h1>Wrapper</h1>
+
+<%= form_with url: root_path do |form| %>
+  <div>
+    <%= form.label :columns %>
+    <%= form.number_field :columns, min: 1, step: 1 %>
+  </div>
+  <br />
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+  <br />
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>
+
+<div>
+  <%= simple_format(@wrapped_output) %>
+</div>
